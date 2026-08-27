@@ -1,0 +1,165 @@
+<!-- Copyright (C) 2023-2025 anonymous
+
+This file is part of PSFree.
+
+PSFree is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+PSFree is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PSFree v1.5.0 - PS4/PS5 Exploit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            @font-face {
+                font-family: 'Liberation Mono';
+                src: url('fonts/LiberationMono-Regular.ttf');
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>PSFree v1.5.0</h1>
+                <p>PS4/PS5 Exploit Chain</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Status</h2>
+                <div id="status-container">
+                    <p><span class="status-indicator status-running" id="status-icon"></span> <span id="status-text">Running exploit...</span></p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+                <!-- Run exploit and reset buttons removed -->
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="console">Console</div>
+                <!-- Payloads and settings tabs removed -->
+            </div>
+
+            <div class="tab-content active" id="tab-console">
+                <pre id="console"></pre>
+            </div>
+
+            <!-- Payloads and settings tabs removed -->
+
+            <!-- Info content moved below console -->
+            <div class="card" style="margin-top: 20px;">
+                <h2 class="card-title">About PSFree</h2>
+              
+                </ul>
+             
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h2 class="card-title">Quick Guide</h2>
+                <ol>
+                 
+                </ol>
+                
+            </div>
+        </div>
+
+        <script src="js/remote-logger.js"></script>
+        <script src="js/payload-manager.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="payload.js"></script>
+        <script>
+            // Initialize Remote Logger
+            document.addEventListener('DOMContentLoaded', function() {
+                // Try to get server IP from URL parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const serverIp = urlParams.get('server');
+
+                // Logger configuration
+                const loggerConfig = {
+                    enabled: true,
+                    localConsole: true
+                };
+
+                // If a server parameter is present, use it
+                if (serverIp) {
+                    loggerConfig.serverUrl = `http://${serverIp}:3000`;
+                }
+
+                // Initialize logger
+                window.RemoteLogger.init(loggerConfig);
+
+                // Log browser info
+                window.RemoteLogger.info('PSFree initialized', {
+                    userAgent: navigator.userAgent,
+                    url: window.location.href,
+                    timestamp: new Date().toISOString()
+                });
+            });
+        </script>
+        <script type="module" src="./alert.mjs"></script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز علاء للأجهزة والألعاب | PS4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="badge">PS4 SYSTEM 13.00</div>
+      <h1>مركز علاء للأجهزة والألعاب</h1>
+      <p>واجهة PS4 احترافية • نظام 13.00</p>
+    </header>
+
+    <section class="panel">
+      <h2>القائمة الرئيسية</h2>
+      <div class="buttons">
+        <button class="menu-btn active">PS4 13.00</button>
+        <button class="menu-btn" onclick="showMessage('هذا الزر واجهة تجريبية فقط.')">Payloads</button>
+        <button class="menu-btn" onclick="showMessage('لا توجد عملية تنفيذ مدمجة في هذه النسخة.')">Tools</button>
+      </div>
+      <div id="message" class="message">اختر أحد الخيارات من القائمة</div>
+    </section>
+
+    <section class="info">
+      <div class="card">
+        <span>المركز</span>
+        <strong>مركز علاء</strong>
+      </div>
+      <div class="card">
+        <span>النظام</span>
+        <strong>PS4 13.00</strong>
+      </div>
+      <div class="card">
+        <span>الاتصال</span>
+        <strong>07713296491</strong>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 مركز علاء للأجهزة والألعاب</p>
+      <p>ديالى - بعقوبة الجديدة</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
